@@ -7,24 +7,14 @@
 body {
     background-color: #d9dcd6;
 }
-/* added nav element selector */
-nav{
-    display:flex;
-    align-items: center;
-}
-
-/* added id selector 'nav-links' */
-#nav-links{
-    position: absolute;
-    right:50px;
-}
-
+/* controls basic designs of header class */
 .header {
     padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
     background-color: #2a607c;
     color: #ffffff;
 }
+
 
 .header h1 {
     display: inline-block;
@@ -34,12 +24,12 @@ nav{
 .header h1 .seo {
     color: #bdbfbb;
 }
-
-.header section {
+/* alligns the nav links to the right of the header */
+.header div {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
     font-size: 20px;
 }
 
@@ -61,7 +51,8 @@ p {
     font-size: 16px;
 }
 
-.hero {
+/* outlines properties for background image */
+.background-image {
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
@@ -70,23 +61,27 @@ p {
     background-position: center;
 }
 
+/* keeps the photos in the content class to the left of their blocks */
 .float-left {
     float: left;
     margin-right: 25px;
 }
 
+
+/* keeps the photos in the content class to the right of their blocks */
 .float-right {
     float: right;
     margin-left: 25px;
 }
 
+/* outlines properties of parent content conainer */
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
     height:auto;
 }
-
+/* outlines properties of parent benefits conainer */
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -94,68 +89,60 @@ p {
     float: right;
     width: 20%;
 
-    /* Changed height to pixels instead of %
-       Reduced height to 960px + 2(20px padding) = 1000px total height to match the height of the contents class. */
+    
     height: auto;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
     background-color: #2589bd;
 }
 
-.benefit-lead {
-    height:auto;
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-brand {
-    height:auto;
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    height:auto;
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
 /* removed repetion of repeated css selectors */
+
+.benefit-lead, .benefit-brand, .benefit-cost{
+    height:auto;
+    margin-bottom: 32px;
+    color: #ffffff;
+}
 
 .benefit-lead h3, .benefit-brand h3, .benefit-cost h3   {
     margin-bottom: 10px;
     text-align: center;
 }
 
+/* sets properties of images contained in '.benefits' children */
 .benefit-lead img, .benefit-brand img, .benefit-cost img{
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
-
+/* sets properties  */
 .search-engine-optimization, .online-reputation-management, .social-media-marketing  {
     margin-bottom: 30px;
     padding: 50px;
     height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
     background-color: #0072bb;
     color: #ffffff;
 }
 
+/* sets max height of the images used in the '.contents' children  */
 .search-engine-optimization img, .online-reputation-management img ,.social-media-marketing img  {
     max-height: 200px;
+    display:inline-block;
 }
 
 .search-engine-optimization h2, .online-reputation-management h2, .social-media-marketing h2 {
+    display: inline-block;
     margin-bottom: 20px;
     font-size: 36px;
 }
-
+/* outlines general properties for the footer parent */
 .footer {
-    padding: 100px;
+    padding: 30px 0px 0px;
     clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
     text-align: center;
 }
+
 
 .footer h2 {
     font-size: 20px;
