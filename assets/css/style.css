@@ -1,149 +1,342 @@
-* {
+/* Using root to define variables for use throughout my css sytling */
+:root{
+    --greyBlue: rgb(57, 77, 104);
+    --hoverBlue:rgb(35, 48, 65);
+    --aquaBlue:rgb(28, 184, 184);
+    --hoverAqua:rgb(34, 230, 230);
+}
+
+
+html{
+    font-size: 100%;
+    line-height: 1.5rem;
     box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    width:100vw;
+    overflow-y: scroll;
+}
+
+body{
+    /* removes basic styles */
     padding: 0;
-    margin: 0;
+    margin:0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    max-width:1500px;
+    min-width: 227px;
 }
 
-body {
-    background-color: #d9dcd6;
+main{
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    width:100%;
+    justify-content:flex-start;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    height: fit-content;
 }
-/* controls basic designs of header class */
-.header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
-    background-color: #2a607c;
-    color: #ffffff;
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.separator{
+    background-color: var(--aquaBlue);
+    height: .25vh;
+    width:100%;
+}
+
+.nav-bar{
+
+    /* turns nav-bar class into flexbox container */
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    line-height: 1rem;
+    height:10vh;
+    overflow:hidden;
+    margin-bottom:0;
+    background-color: var(--greyBlue);
+
+}
+
+/* css class selector to set the properties of the unordered list in the nav bar */
+.page-links{
+    list-style: none;
+    display:flex;
+    /* spaces each li evenly across it's width */
+    justify-content: space-evenly;
+    align-items: center;
+    padding:0%;
+    margin:0;
+
+}
+
+.page-links li{
+    flex:1 1 10%;
+    text-align: center;
+}
+
+/* applied same color to all a children in class 'brand' and 'page-links' */
+.page-links a {
+    flex: 1 0 ;
+    
+    font-weight: bolder;
+    transition: all ease-in-out 0.35s;
+    color:var(--aquaBlue); 
+    
+}
+/*using a psedo class to set css properties when the user interacts with page-links with a pointing device*/
+.page-links a:hover{
+    background-color:var(--hoverBlue);
+}
+/* creates a psuedo class to add styling after the anchor */
+.page-links a::after{
+    content:"";
+    display: block;
+    /* TODO: width > 100% and center */
+    margin:0 auto;
+    width:3em;
+    border-bottom:4px var(--aquaBlue) solid;
+    /* space between underline and word */
+    padding-top:10px; 
 }
 
 
-.header h1 {
-    display: inline-block;
-    font-size: 48px;
-}
-
-.header h1 .seo {
-    color: #bdbfbb;
-}
-/* alligns the nav links to the right of the header */
-.header div {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
-    font-size: 20px;
-}
-
-.header div ul {
-    list-style-type: none;
-}
-
-.header div ul li {
-    display: inline-block;
-    margin-left: 25px;
-}
-
-a {
-    color: #ffffff;
+.brand a, .page-links a{
+    display:block;
+    padding:1rem;
     text-decoration: none;
 }
 
-p {
-    font-size: 16px;
-}
-
-/* outlines properties for background image */
-.background-image {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("../images/digital-marketing-meeting.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-/* keeps the photos in the content class to the left of their blocks */
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-
-/* keeps the photos in the content class to the right of their blocks */
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
-/* outlines properties of parent content conainer */
-.content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
-    height:auto;
-}
-/* outlines properties of parent benefits conainer */
-.benefits {
-    margin-right: 20px;
-    padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-
+.brand{
+    background-color: var(--aquaBlue);
+    margin:0 auto;
     
-    height: auto;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
-    background-color: #2589bd;
+}
+.brand a{
+    text-decoration: none;
+    color:var(--greyBlue)
 }
 
-/* removed repetion of repeated css selectors */
-
-.benefit-lead, .benefit-brand, .benefit-cost{
-    height:auto;
-    margin-bottom: 32px;
-    color: #ffffff;
+/* background image */
+.hero-image{
+    background-image:url('/assets/images/Melbourne-Tracks1.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:15vh;
+    width:99%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.hero-text{
+    padding-top:-2%;
+    /* pushes children down */
+    margin-top:auto;
+    margin-bottom:0;
+    /* background color with opacity of .3 */
+    background-color:rgb(57, 77, 104,0.4);
+    /* TODO:Change color */
+    color:rgb(229, 255, 0);
+    line-height: .6;
+    font-size: 110%;
 }
 
-.benefit-lead h3, .benefit-brand h3, .benefit-cost h3   {
-    margin-bottom: 10px;
-    text-align: center;
+.hero-text h1{
+    margin-top:10%;
 }
 
-/* sets properties of images contained in '.benefits' children */
-.benefit-lead img, .benefit-brand img, .benefit-cost img{
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
+/* About Me Stlying */
+
+.about-block article{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    line-height:1.2;
 }
-/* sets properties  */
-.search-engine-optimization, .online-reputation-management, .social-media-marketing  {
-    margin-bottom: 30px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
-    background-color: #0072bb;
-    color: #ffffff;
+.para-1{
+    margin-left:1%;
+    margin-right:1%
 }
 
-/* sets max height of the images used in the '.contents' children  */
-.search-engine-optimization img, .online-reputation-management img ,.social-media-marketing img  {
-    max-height: 200px;
-    display:inline-block;
+.about-sign-off{
+    margin: 5px auto 0 auto;
 }
 
-.search-engine-optimization h2, .online-reputation-management h2, .social-media-marketing h2 {
+/* styling all section headers */
+.section-header{
     display: inline-block;
-    margin-bottom: 20px;
-    font-size: 36px;
+    margin-left:1%;
+    color:var(--greyBlue)
 }
-/* outlines general properties for the footer parent */
-.footer {
-    padding: 30px 0px 0px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+.section-header::after{
+    content:'';
+    display: block;
+    margin:0 auto;
+    width:98vw;
+    padding-top:10px;
+    border-bottom: 3px var(--greyBlue) solid;
+}
+
+/* Work Styling */
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height:fit-content ;
+    margin-bottom: 1vh;
+
+}
+.card-container a{
+    display: flex;
+    border: 3px var(--aquaBlue) solid;
+    border-radius: 7px;
+}
+
+.project-card-large{
+    padding:0;
+    margin:1% 2.5%;
+    width:100%;
+    height:20vh; 
+}
+.project-card{
+    margin: 1% 2.5%;
+    padding:0 ;
+    height: 10vh;
+    width: 95%;
+
+}
+
+.card-container a:hover{
+    box-shadow: 0px 0px 10px var(--hoverAqua);
+    transition: ease-in 0.45s;
+}
+
+/* Contact Me Styling */
+
+.contact-links{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.contact-links a{
+    text-decoration: none;
+
+}
+
+
+.contact-container ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+.contact-links li{
+    display: flex;
+    justify-content: center;
+    background-color: var(--greyBlue);
+    width:100%;
+    margin:3px 0;
+
+}
+
+.contact-links a{
+    width: 100%;
     text-align: center;
+    padding:10px;
+    color:var(--aquaBlue)
+}
+.contact-links a::after{
+    content:"";
+    display: block;
+    /* TODO: width > 100% and center */
+    margin:0 auto;
+    width:7rem;
+    border-bottom:4px var(--aquaBlue) solid;
+    /* space between underline and word */
+    padding-top:5px; 
+}
+
+.contact-links a:hover{
+    background-color: var(--hoverBlue);
 }
 
 
-.footer h2 {
-    font-size: 20px;
+
+@media screen and (min-width:450px) {
+    /* at a screen width of 450px the page links in the nav bar will expand to take up 100% of the width */
+    .page-links{
+        width:100%;
+    }
+    .separator{
+        height:.4vh 
+    }
+    .page-links a::after{
+        width:3.5em;
+
+
+
+    }
+
+
+@media screen and (min-width:768px){
+    .project-card{
+        width:45%;
+        margin: 1% 1.25%;
+    }
+}
+}
+
+@media screen and (min-width:992px){
+    .page-links{
+        width: 20%;
+        padding-right:7%;
+    }
+    .nav-bar{ 
+        height: 10vh;
+    }
+    .nav-bar h1{
+        margin-right: auto;
+        margin-left: 0;
+    }
+    .brand a{
+        padding-right:0%;
+    }
+
+    main{top:10vh}
+    body{
+        max-width: none;
+    }
+    /* fixing the header to the top of the viewport, header will be there even on scroll */
+header{
+    position: fixed;
+    width:100%;
+    top:0;
+    z-index:5;
+}
+
+}
+@media screen and (min-width:1400px){
+    .page-links{
+        width: 15%;
+    }
+}
+@media screen and (min-width:1400px){
+    .page-links{
+        width: 15%;
+    }
+}
+@media screen and (min-width:1800px){
+    .page-links{
+        width: 12.5%;
+    }
 }

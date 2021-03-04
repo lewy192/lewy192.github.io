@@ -1,102 +1,152 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-AU">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- linking custom font -->
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+        <!-- linking reset sheet -->
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <!-- linking style sheet -->
+        <link rel ="stylesheet" href = "assets/css/style.css">
+        <!-- TODO: change title? -->
+        <title>Place Holder</title>
+    </head>
+    <body>
+        <header>
+            
+            <nav class = "nav-bar">
+                
+                <h1 class = "brand"><a href = "#">Display Case of Lewis Hill</a></h1>
+                
+                    <ul class = "page-links">
+                        <li>
+                            <a href = "#" tabindex="0">About</a>
+                        </li>
 
-<head>
-    <meta charset="UTF-8" />
-    <!-- added a reset.css for cross borwser consistent layouts -->
-    <link rel="resetsheet" href = "./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- changed title from 'website' to 'Horiseon: SEO, ORM, SMM'-->
-    <title>Horiseon: SEO, ORM, SMM</title>
-</head>
+                        <li>
+                            <a href = "#" tabindex="0">Work</a>
+                        </li>
 
-<body>
-    <header>
-        <nav class="header">
-                <h1>Hori<span class="seo">seo</span>n</h1>
-            <div>
-                <ul>
-                    <li>
-                        <a href="#search-engine-optimization">Search Engine Optimization</a>
-                    </li>
-                    <li>
-                        <a href="#online-reputation-management">Online Reputation Management</a>
-                    </li>
-                    <li>
-                        <a href="#social-media-marketing">Social Media Marketing</a>
-                    </li>
-                </ul>
+                        <li>
+                            <a href = "#" tabindex="0">Contact</a>
+                        </li>
+
+                        <li>
+                            <a href = "#" tabindex="0">Resume</a>
+                        </li>
+
+                    </ul>
+                
+            </nav>
+        </header>
+        <!-- MAIN -->
+        <main>
+            <!--Signifies top of Main -->
+            <div class = "separator"></div>
+
+            <!-- Image -->
+            <div class = "hero-image">
+                <div class = "hero-text">
+                    <h1>Lewis Hill</h1>
+                    <p>Web Developer</p>
+                    <p>Melbourne, Australia</p>
+                </div>
+                <!-- <img src = "assets/images/Melbourne-Tracks1.jpg" alt = "Photo of a part of Melbourne's skyline from a bridge with train tracks underneath."> -->
             </div>
-        </nav>
-    </header>   
-    <!-- renamed class 'hero' to a less ambigous class name 'background image' -->
-    <div class="background-image"></div>
 
 
-    <main class="content">
-        <!-- added id, jump to seo content now works  -->
-        <article id ="search-engine-optimization" class="search-engine-optimization">
+        <section class = "content">
+            <section class = "about-block">
+                <div class = "section-header">
+                    <h1>About Me</h1>
+                </div>
+
+                <article>
+                
+                    <p class = "para-1">
+                        I fell in love with computers at the age of 11.
+                        <br>
+                        It started with my first computer, then progressed to my first home built computer and spiraled up from there.
+                        Over the years we have acomplished a lot together:The construciton of PCs for myself and friends, Servers, A home DataBase and Scripts. 
+                        <br>
+                        January 2020. This was the turning point. The Heat turned up and we dove into programming head first.
+                        <br><br>
+                        This brings me right to where I am today:
+                        <br>
+                        Currently starting my career in the industry with Monash University and Trilody Education, studying Full-Stack Web Development.
+                        <br>
+                        The start of a new chapter and I could not be more excited for it.
+                    </p> 
+                    
+                    <p class = para-2>
+                        If you would like to find out a little bit more about me, you can head <a href = "#">here</a> for my resume.
+                        <br>
+                        If you wish for something more personal, you can head <a href = "#">here</a> for my contact information.
+                    </p>
+                    <p class = "about-sign-off">
+                        Thank you for your time,
+                        <br>
+                        Lewis James Hill.
+                    </p>
+
+                </article>
+            </section>
+
+            <section class = "work-block">
+                <div class = "section-header">
+                    <h1>Work</h1>
+                </div>
+                <p>
+                    Below you will find cards, each one will take you to a different project
+                </p>
+                <!-- work cards will go in here -->
+                <div class = "card-container">
+                    <a class = "project-card-large" href = "#"></a>
+                    <a class = "project-card" href = "#"></a>
+                    <a class = "project-card" href = "#"></a>
+                    <a class = "project-card" href = "#"></a>
+                    <a class = "project-card" href = "#"></a>
+                </div>
+
+            </section>
+        </section>
+
+            <footer>
+                <div  class = "section-header">
+                    <h1>Contact Me</h1>
+                </div>
+                <figure class = "contact-container">
+                    <ul class = "contact-links">
+                        <li>
+                            <a href = "#">+61 467 831 884</a>
+                        </li>
+                        <li>
+                            <a href = "#">Email</a>
+                        </li>                    
+                        <li>
+                            <a href = "https://github.com/lewy192">Github</a>
+                        </li>                   
+                        <li>
+                            <a href = "#">Twitter</a>
+                        </li>                    
+                        <li>
+                            <a href = "https://open.spotify.com/user/lewy-192?si=ACayDnlTRz2ik09s1un23g&nd=1">Spotify</a>
+                        </li>
+                    </ul>
+                </figure>
+            </footer>
+
+
+
+            
+        </main>
     
-            <h2>Search Engine Optimization</h2>
-        
-            <!-- added alt to image -->
-            <img src="./assets/images/search-engine-optimization.jpg" class="float-left" alt = "Workstation with a MacBook, a cup of coffe, a pencil pot and SO diagram"/>
-            <p>
-                The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
-            </p>
-        </article>
-
-        <article id="online-reputation-management" class="online-reputation-management">
-            <h2>Online Reputation Management</h2>
-            <!-- added alt for accessibility -->
-            <img src="./assets/images/online-reputation-management.jpg" class="float-left" alt = "A man viewing an upward trending graph with a title 'Reputation'. He is viewing on his Macbook pro, whilst holding his cell phone."/>
-            <p>
-                The web is full of opinions, and some of these can be negative. Social media allows anyone with an internet connection to say whatever they want about your business. Online Reputation Management gives you the control over what potential customers see when they search for your business.
-            </p>
-        </article>
-        <article id="social-media-marketing" class="social-media-marketing">
-            <h2>Social Media Marketing</h2>
-            <!-- added alt for accessibility -->
-            <img src="./assets/images/social-media-marketing.jpg" class="float-left" alt = "A top down view of 6 People sat at a wooden board room table. on the table there are social media icons, 2 tablets, one macbook and three cups of cofee" />
-            <p>
-                Social media continues to have a sizable influence on buying habits. Social media marketing helps you determine which platforms are suited to your brand, using analytics to find the right markets and increase your lead generation.
-            </p>
-        </article>
-    </main>
+    </body>
 
 
-    <aside class="benefits">
-        <div class="benefit-lead">
-            <h3 class = "benefit-headers">Lead Generation</h3>
-            <!-- added alt for accessibility -->
-            <img src="./assets/images/lead-generation.png" alt = "A cog half in the top of a hopper with a dollar sign coming out the bottom."/>
-            <p>
-                Inbound strategies for lead generation require less work for your business, bringing customers directly to your website.
-            </p>
-        </div>
-        <div class="benefit-brand">
-            <h3 class = "benefit-headers">Brand Awareness</h3>
-            <!-- added alt for accessibility -->
-            <img src="./assets/images/brand-awareness.png" alt = "A torso with a tie. There is a lightbulb emmitting rays where the head would be."/>
-            <p>
-                Users find your business through paid and organic searches, increasing the search ranking and visibility for your business.
-            </p>
-        </div>
-        <div class="benefit-cost">
-            <h3 class = "benefit-headers">Cost Management</h3>
-            <!-- added alt for accessibility -->
-            <img src="./assets/images/cost-management.png" alt = "Three dollar signs enclosed in circles, and a cog collected together.">
-            <p>
-                As the search ranking for your business increases, your advertising costs decrease, and you no longer need to advertise your page.
-            </p>
-        </div>
-    </aside>
-    <footer class="footer">
-        <h2>Made with ❤️️ by Horiseon</h2>
-        <p>
-            &copy; 2019 Horiseon Social Solution Services, Inc.
-        </p>
-    </footer>
-</body>
+
+
 
 </html>
