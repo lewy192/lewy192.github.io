@@ -156,16 +156,6 @@ main{
     align-items: center;
     line-height:1.2;
 }
-.para-1{
-    /* margin-left:1%; */
-    /* margin-right:1% */
-}
-
-.about-sign-off{
-    /* margin: 5px auto 0 auto; */
-}
-
-/* styling all section headers */
 .section-header{
     display: inline-block;
     /* padding-left:1%; */
@@ -192,28 +182,58 @@ main{
 }
 .card-container a{
     display: flex;
-    border: 3px var(--aquaBlue) solid;
-    border-radius: 7px;
+    border: 5px var(--aquaBlue) solid;
+    text-decoration: none;
+    
 }
 
 .project-card-large{
+    display: flex;
     padding:0;
-    margin:1% 2.5%;
-    width:100%;
+    margin:1% 0;
+    width:95%;
     height:20vh; 
 }
 .project-card{
-    margin: 1% 2.5%;
+    margin: 1% 0;
     padding:0 ;
     height: 10vh;
     width: 95%;
-
+    display: flex;
 }
 
 .card-container a:hover{
-    box-shadow: 0px 0px 10px var(--hoverAqua);
+    box-shadow: 0px 0px 15px var(--hoverAqua);
     transition: ease-in 0.45s;
 }
+
+.card-text {
+    line-height: 1;
+    color:var(--greyBlue);
+    background-color: var(--aquaBlue);
+    width:20%;
+    margin-top: auto;
+    margin-bottom: 10px;
+
+    
+}
+
+.card-text h3,h4{
+    display: inline-block;
+    margin: 0em;
+    padding: .5em 0 .5em .5em;
+}
+
+.project-card-large{
+    background-image: url(/assets/images/digital-marketing-meeting.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
 
 /* Contact Me Styling */
 
@@ -260,13 +280,19 @@ main{
     padding-top:5px; 
 }
 
+
 .contact-links a:hover{
     background-color: var(--hoverBlue);
 }
 
+/* makes 'overflow' bold so it aligns with their original logo */
+.stackoverflow{
+    font-weight: 900;
+}
 
 
-@media screen and (min-width:450px) {
+
+@media screen and (min-width:480px) {
     /* at a screen width of 450px the page links in the nav bar will expand to take up 100% of the width */
     .page-links{
         width:100%;
@@ -318,7 +344,7 @@ header{
 }
 
 }
-@media screen and (min-width:1400px){
+@media screen and (min-width:1281px){
     .page-links{
         width: 15%;
     }
